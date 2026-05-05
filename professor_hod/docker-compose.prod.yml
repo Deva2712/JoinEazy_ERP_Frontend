@@ -1,0 +1,37 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    environment:
+      - WATCHPACK_POLLING=true
+      - MODE=development
+    volumes:
+      - /app/node_modules
+      - .:/app
+      - ./logs/frontend:/app/logs
+    networks:
+      - frontend-network
+    stdin_open: true
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "80:80"
+    environment:
+      - SERVER_NAME=${SERVER_NAME}
+      - BACKEND_APP_API_URL=${BACKEND_APP_API_URL}
+      - MODE=development
+    volumes:
+      - ./logs/nginx:/var/log/nginx
+    depends_on:
+      - frontend
+    networks:
+      - frontend-network
+
+networks:
+  frontend-network:
+    driver: bridge
