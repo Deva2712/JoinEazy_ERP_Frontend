@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://joineazy.com/404</loc>
+        <priority>0.5</priority>
+        <changefreq>never</changefreq>
+    </url>
+    <url>
+        <loc>https://joineazy.com/privacy</loc>
+        <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://joineazy.com/terms</loc>
+        <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://joineazy.com/help</loc>
+        <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://joineazy.com/about</loc>
+        <priority>0.5</priority>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://joineazy.com/guidelines</loc>
+        <priority>0.5</priority>
+        <changefreq>yearly</changefreq>
+    </url>
+</urlset>
