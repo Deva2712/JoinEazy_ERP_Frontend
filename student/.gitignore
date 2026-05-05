@@ -1,0 +1,64 @@
+# Node modules
+node_modules/
+
+# Build output
+build/*
+!build/.gitkeep
+
+# Logs
+logs/
+!logs/**/.gitkeep
+
+# SSL / certificates
+ssl/
+certs/
+
+# Debug/dev artifacts
+debug/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+*.local
+*.secret
+*.key
+
+# IDE config
+.vscode/
+.idea/
+*.iml
+*.code-workspace
+*.sublime-*
+
+# OS temp
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+__MACOSX/
+*.swp
+*.tmp
+
+# Runtime logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Caches and tools
+dist/
+out/
+coverage/
+*.lcov
+.cache/
+.turbo/
+.parcel-cache/
+.vite/
+node_modules/.vite/
+
+# Local override files
+docker-compose.override.yml
+
+# Optional nginx runtime artifacts
+nginx/logs/

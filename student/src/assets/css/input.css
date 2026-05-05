@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 212 50% 97%;
+  --foreground: 222 84% 5%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 84% 5%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 84% 5%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 60%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 217 91% 60%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: #D3D6DA;
+  --input: 214 32% 91%;
+  --ring: 217 91% 60%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222 84% 5%;
+  --foreground: 210 40% 98%;
+  --card: 222 84% 5%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222 84% 5%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 11%;
+  --secondary: 217 19% 27%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217 19% 27%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 217 19% 27%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217 19% 27%;
+  --input: 217 19% 27%;
+  --ring: 217 91% 60%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Roboto", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    color: #1A1A1A;
+  }
+
+  .text-black {
+    color: #1A1A1A;
+  }
+
+  .font-arial {
+    font-family: "Arial", sans-serif;
+  }
+}
+
+/* Masonry layout support for older browsers */
+@supports not (column-fill: auto) {
+  .notes-masonry {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+/* Ensure proper spacing in masonry layout */
+.notes-masonry>* {
+  margin-bottom: 1.25rem;
+}
+
+/* Custom scrollbar styles for menus */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f7fafc;
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Ensure menu items don't get cut off */
+.menu-container {
+  position: relative;
+  z-index: 1000;
+}
